@@ -43,7 +43,7 @@ namespace pr7_3_
             //эл, которые больше ср арифмитического
             Console.WriteLine("Элементы,которые больше среднего аримитического: ");
             for (int i = 0; i < num.Length; i++) {
-                if (num[i] < average)
+                if (num[i] > average)
                 { Console.Write(num[i] + " "); }
             }Console.WriteLine();
             Console.WriteLine($"Минимальный элемент: {min}");

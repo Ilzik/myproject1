@@ -11,48 +11,40 @@ namespace pr7_5_
     {
         static void Main(string[] args)
         {
-            //  сотрудники, должность
-            string[] name = {"Хакимзянова Ильзиля Райнуровна", "Иванов Иван Иванович", "Гараева Сюмбель Маратовна",
-            "Скребнева Яна Генадьевна", "Габидуллина Зухра Рамилевна", "Хакимзянов Рамиль Райнурович" };
-
-            string[] prof = {"Специалист по информационным системам", "Менеджер", "Специалист по информационным системам",
-            "Программист", "Веб разработчик", "Тренер"};
-
-            //  поиск с заданной долностҗю
-            Console.Write("Должность: ");
-            string job = Console.ReadLine();
-
-            Console.WriteLine("С этой должностью:");
-            for (int i = 0; i < name.Length; i++)
+            string[] sotryd =
             {
-                if (prof[i] == job)
-                Console.WriteLine(name[i]);
+            "Хакимзянова Ильзиля Райнуровна-СИС",
+            "Гараева Сюмбель Маратовна-СИС",
+            "Скребнева Яна Генадьевна-Программист",
+            "Габидуллина Зухра Рамилевна-Веб разработчик",
+            "Хакимзянов Рамиль Райнурович-Тренер",
+            "Хасанова Илюза Фидаилевна-СИС",
+            "Скребнева Аделина Генадьевна-Программист",
+            };
+
+            Console.WriteLine("==Анализ сотрудников==");
+
+            Console.WriteLine("Сотрудники с должностью СИС:");
+            var SIS = sotryd.Where(b => b.Split('-')[1] == "СИС");
+            foreach (var sis in SIS)
+            {
+                Console.WriteLine($" - {sis.Split('-')[0]} {sis.Split('-')[1]}");
+            }
+            Console.WriteLine("Сотрудники с фамилией на букву 'Х':");
+            var family = sotryd.Where(e => e.Split('-')[0].StartsWith("Х"));
+            foreach (var fam in family)
+            {
+                Console.WriteLine($" - {fam.Split('-')[0]}");
             }
 
-            // одинаковые первые буквы фамилии
-            Console.Write("Первая буква фамилии: ");
-            char A = Console.ReadLine()[0];
-
-            Console.WriteLine("С этой буквы:");
-            for (int i = 0; i < name.Length; i++)
-            {
-                if (name[i][0] == A)
-                    Console.WriteLine(name[i] + " " + prof[i]);
-           else
-            {
-                Console.WriteLine("Нет сотрудникв с фамилией на эту букву");
-            }
-            }
             
-
-                // по алфавиту
-                Console.WriteLine("По алфавиту:");
-            Array.Sort(name, prof);
-
-            for (int i = 0; i < name.Length; i++)
+            Console.WriteLine("По алфавиту:");
+            var alfavit = sotryd.OrderBy(e => e.Split('-')[0]);
+            foreach (var alf in alfavit)
             {
-                Console.WriteLine(name[i] + " " + prof[i]);
+                Console.WriteLine($" - {alf.Split('-')[0]} - {alf.Split('-')[1]}");
             }
+
         }
     }
 }

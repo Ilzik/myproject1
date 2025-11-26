@@ -18,7 +18,7 @@ namespace pr7_4_
             }
             Console.WriteLine( );
 
-            // Считаем количество ненулевых элементов
+            //  количество ненулевых элементов
             int count = 0;
             for (int i = 0; i < num.Length; i++)
             {
@@ -26,7 +26,7 @@ namespace pr7_4_
                     count++;
             }
 
-            // Создаем новый массив без нулей
+            // новый массив без нулей
             int[] result = new int[count];
             int index = 0;
 

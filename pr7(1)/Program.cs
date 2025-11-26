@@ -9,7 +9,7 @@ namespace pr7_1_
     internal class Program
     {
         static void Main(string[] args)
-        {
+        { 
             int[] num = new int[10];
             Random random = new Random();
            for(int i=0; i<num.Length; i++)
@@ -27,9 +27,8 @@ namespace pr7_1_
             for(int i=0; i< num.Length;i++)
             {
                 sum += num[i];
-                sred = sum / 10;
                 
-            }
+            }  sred = sum / 10;
             Console.WriteLine($"Cумма всех элементов массива: {sum}");
             Console.WriteLine($"Среднее арифметическое: {sred}");
             int a = 0;
