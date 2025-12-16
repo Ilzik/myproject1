@@ -51,8 +51,8 @@ namespace pr8_4_
             {
                 if (doska[stroka, 0] == doska[stroka, 1] && doska[stroka, 1] == doska[stroka, 2])
                 {
-                    if (doska[stroka, 0] == 1) win = "Результат: Победили крестики (X)";
-                    if (doska[stroka, 0] == 2) win = "Результат: Победили нолики (O)";
+                    if (doska[stroka, 0] == 1) win = "Победили крестики (X)";
+                    if (doska[stroka, 0] == 2) win = " Победили нолики (O)";
                 }
             }
 
@@ -60,21 +60,21 @@ namespace pr8_4_
             {
                 if (doska[0, stolb] == doska[1, stolb] && doska[1, stolb] == doska[2, stolb])
                 {
-                    if (doska[0, stolb] == 1) win = "Результат: Победили крестики (X)";
-                    if (doska[0, stolb] == 2) win = "Результат: Победили нолики (O)";
+                    if (doska[0, stolb] == 1) win = " Победили крестики (X)";
+                    if (doska[0, stolb] == 2) win = "Победили нолики (O)";
                 }
             }
 
             if (doska[0, 0] == doska[1, 1] && doska[1, 1] == doska[2, 2])
-            {
-                if (doska[0, 0] == 1) win = "Результат: Победили крестики (X)";
-                if (doska[0, 0] == 2) win = "Результат: Победили нолики (O)";
+            { 
+                if (doska[0, 0] == 1) win = "Победили крестики (X)";
+                if (doska[0, 0] == 2) win = "Победили нолики (O)";
             }
 
             if (doska[0, 2] == doska[1, 1] && doska[1, 1] == doska[2, 0])
             {
-                if (doska[0, 2] == 1) win = "Результат: Победили крестики (X)";
-                if (doska[0, 2] == 2) win = "Результат: Победили нолики (O)";
+                if (doska[0, 2] == 1) win = "Победили крестики (X)";
+                if (doska[0, 2] == 2) win = " Победили нолики (O)";
             }
 
             Console.WriteLine(" " + win);

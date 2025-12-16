@@ -11,21 +11,21 @@ namespace pr8_2_
         static void Main(string[] args)
         {
             Console.Write("Введите количество строк: ");
-            int stroka= Convert.ToInt32(Console.ReadLine());
+            int line= Convert.ToInt32(Console.ReadLine());
 
 
             Console.Write("Введите количество столбцов: ");
-            int stolb = Convert.ToInt32(Console.ReadLine());
+            int col = Convert.ToInt32(Console.ReadLine());
 
   
-            if (stroka != stolb)
+            if (line != col)
             {
-                Console.WriteLine($"Вы ввели {stroka} строк и {stolb} столбцов.Массив должен быть квадратным.");
+                Console.WriteLine($"Вы ввели {line} строк и {col} столбцов.Массив должен быть квадратным.");
                 Console.WriteLine($"Введите одинаковые числа");
                 return;
             }
 
-            int N = stroka;
+            int N = line;
             int[,] array = new int[N, N];
             Random random = new Random();
 

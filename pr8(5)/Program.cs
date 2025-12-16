@@ -33,29 +33,29 @@ namespace pr8_5_
                     int a = array[i, j];
 
 
-                    bool minstroka = true;
+                    bool MinStr = true;
                     for (int col = 0; col < 4; col++)
                     {
                         if (array[i, col] < a)
                         {
-                            minstroka = false;
+                            MinStr = false;
                             break;
                         }
                     }
 
 
-                    bool maxstolb = true;
+                    bool Max = true;
                     for (int row = 0; row < 4; row++)
                     {
                         if (array[row, j] > a)
                         {
-                            maxstolb = false;
+                            Max = false;
                             break;
                         }
                     }
 
 
-                    if (minstroka && maxstolb)
+                    if (MinStr && Max)
                     {
                         Console.WriteLine($"[{i},{j}] = {a}");
                         b = true;
